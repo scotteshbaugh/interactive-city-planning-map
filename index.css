@@ -1,0 +1,14 @@
+body {
+    
+}
+
+.map_container {
+    background: url(images/map.jpg) no-repeat 0px 0px;
+    height: 325px;
+    width: 760px;
+    position: relative;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 12px;
+    margin: 0px 0px 0px 20px;
+}

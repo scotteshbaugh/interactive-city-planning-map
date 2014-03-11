@@ -1,23 +1,27 @@
 html {
-    height: 900px;
-    overflow: hidden;
-    width: 1440px;
+    height: 2160px;
+    overflow: scroll;
+    width: 3840px;
 }
 
 body {
     background: url(/images/background.png) center center;
-    height: 900px;
-    overflow: hidden;
-    width: 1440px;
+    height: 2160px;
+    overflow: scroll;
+    width: 3840px;
 }
 
 #points-of-interest {
-    height: 900px;
+    height: 2160px;
     left: 0px;
-    overflow: hidden;
+    overflow: scroll;
     position: absolute;
     top: 0px;
-    width: 1440px;
+    width: 3840px;
+}
+
+#points-of-interest img {
+    opacity: .5;
 }
 
 .point-of-interest {
@@ -45,4 +49,26 @@ body {
     position: absolute;
     width: 180px;
     z-index: 2;
+}
+
+.descriptions {
+    display: none;
+}
+.pre-process {
+    display: none;
+}
+.master-planning-process{
+    display: none;
+}
+.comprehensive-planning-process {
+    display: none;
+}
+.neighborhood-planning-process {
+    display: none;
+}
+.overall-planning-process {
+    display: none;
+}
+.information {
+    display: none;
 }

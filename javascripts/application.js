@@ -40,11 +40,11 @@ function exitFullscreen() {
 
 function closest(element, selector) {
     var matchesSelector;
-    
+
     matchesSelector = element.matches || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector;
 
     while (element) {
-        if (matchesSelector.bind(element)(selector)) {
+        if (element !== document && matchesSelector.bind(element)(selector)) {
             return element;
         } else {
             element = element.parentNode;
@@ -82,10 +82,8 @@ onReady(function() {
 
                 event.preventDefault();
 
-                pointOfInterest = closest(this, "div");
+                pointOfInterest = this;
 
-                console.log(pointOfInterest);
-                
                 description = document.getElementById("current-point-of-interest-description");
 
                 if (description) {
@@ -150,7 +148,11 @@ onReady(function() {
 
         if (pointsOfInterest && pointsOfInterest.length > 0) {
             for (var i = 0; i < pointsOfInterest.length; i++) {
-                if (event.toElement !== pointsOfInterest[i]) {
+                var closestPointOfInterest;
+
+                closestPointOfInterest = closest(event.toElement, ".point-of-interest");
+
+                if (closestPointOfInterest !== pointsOfInterest[i]) {
                     if (!pointsOfInterest[i].classList.contains("hot")) {
                         pointsOfInterest[i].style.boxShadow = "";
                     }
@@ -158,7 +160,7 @@ onReady(function() {
             }
         }
 
-        if (!event.toElement.classList.contains("point-of-interest")) {
+        if (!closest(event.toElement, ".point-of-interest")) {
             description = document.getElementById("current-point-of-interest-description");
 
             if (description) {

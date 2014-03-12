@@ -38,6 +38,22 @@ function exitFullscreen() {
     }
 }
 
+function closest(element, selector) {
+    var matchesSelector;
+    
+    matchesSelector = element.matches || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector;
+
+    while (element) {
+        if (matchesSelector.bind(element)(selector)) {
+            return element;
+        } else {
+            element = element.parentNode;
+        }
+    }
+
+    return false;
+}
+
 onReady(function() {
     var fullscreen, pointsOfInterest, hotSpots, phase;
 
@@ -66,8 +82,10 @@ onReady(function() {
 
                 event.preventDefault();
 
-                pointOfInterest = this;
+                pointOfInterest = closest(this, "div");
 
+                console.log(pointOfInterest);
+                
                 description = document.getElementById("current-point-of-interest-description");
 
                 if (description) {
@@ -80,7 +98,7 @@ onReady(function() {
 
                 description.setAttribute("id", "current-point-of-interest-description");
 
-                description.innerHTML = pointOfInterest.getAttribute("data-description");
+                description.innerHTML = document.getElementById(pointOfInterest.getAttribute("data-description")).innerHTML;
 
                 if (pointOfInterest.offsetLeft - 50 > 10) {
                     if (pointOfInterest.offsetLeft - 50 < 1230) {

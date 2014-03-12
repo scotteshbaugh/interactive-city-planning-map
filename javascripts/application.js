@@ -90,7 +90,7 @@ onReady(function() {
                     description.parentNode.removeChild(description);
                 }
 
-                pointOfInterest.style.boxShadow = "0px 0px 45px 0px #000000";
+                pointOfInterest.classList.add("active");
 
                 description = document.createElement("div");
 
@@ -153,6 +153,8 @@ onReady(function() {
                 closestPointOfInterest = closest(event.toElement, ".point-of-interest");
 
                 if (closestPointOfInterest !== pointsOfInterest[i]) {
+                    pointsOfInterest[i].classList.remove("active");
+
                     if (!pointsOfInterest[i].classList.contains("hot")) {
                         pointsOfInterest[i].style.boxShadow = "";
                     }

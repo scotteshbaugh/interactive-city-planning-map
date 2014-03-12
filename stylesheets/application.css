@@ -26,15 +26,20 @@ body {
 
 .point-of-interest {
     background-clip: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
     border: 1px solid #000000;
-    border-radius: 50px;
-    height: 98px;
+    height: 130px;
     position: absolute;
-    width: 98px;
+    width: 130px;
 }
 
 .point-of-interest:hover {
-    box-shadow: 0px 0px 45px 0px #000000;
+    background-position: -130px 0;
+}
+
+.point-of-interest.active {
+    background-position: -130px 0;
 }
 
 #current-point-of-interest-description {

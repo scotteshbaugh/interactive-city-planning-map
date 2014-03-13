@@ -54,6 +54,66 @@ function closest(element, selector) {
     return false;
 }
 
+function showDescription(element) {
+    var parent, description, left, top, width, height;
+
+    parent = document.getElementById("points-of-interest");
+
+    description = document.getElementById("current-point-of-interest-description");
+
+    if (description) {
+        description.parentNode.removeChild(description);
+    }
+
+    element.classList.add("active");
+
+    description = document.createElement("div");
+
+    description.setAttribute("id", "current-point-of-interest-description");
+
+    description.innerHTML = document.getElementById(element.getAttribute("data-description")).innerHTML;
+
+    width = parseInt(element.getAttribute("data-description-width"));
+
+    if (!width || width < 200) {
+        width = 200;
+    }
+
+    description.style.width = width.toString() + "px";
+
+    left = element.offsetLeft + ((element.offsetWidth - width) / 2);
+
+    if (left > parent.offsetWidth - width - 10) {
+        left = parent.offsetWidth - width - 10;
+    } else {
+        if (left < 10) {
+            left = 10;
+        }
+    }
+
+    height = parseInt(element.getAttribute("data-description-height"));
+
+    if (!height || height < 100) {
+        height = 100;
+    }
+
+    description.style.height = height.toString() + "px";
+
+    top = element.offsetTop - (height + 10);
+
+    if (top < 10) {
+        top = element.offsetTop + element.offsetHeight + 10;
+    }
+
+    description.style.left = left.toString() + "px";
+
+    description.style.top = top.toString() + "px";
+
+    parent.appendChild(description);
+
+    return description;
+}
+
 onReady(function() {
     var fullscreen, pointsOfInterest, hotSpots, phase;
 
@@ -78,52 +138,14 @@ onReady(function() {
     if (pointsOfInterest && pointsOfInterest.length > 0) {
         for (var i = 0; i < pointsOfInterest.length; i++) {
             pointsOfInterest[i].addEventListener("click", function(event) {
-                var pointOfInterest, pointOfInterestDescription, left, top;
-
                 event.preventDefault();
 
-                pointOfInterest = this;
-
-                description = document.getElementById("current-point-of-interest-description");
-
-                if (description) {
-                    description.parentNode.removeChild(description);
-                }
-
-                pointOfInterest.classList.add("active");
-
-                description = document.createElement("div");
-
-                description.setAttribute("id", "current-point-of-interest-description");
-
-                description.innerHTML = document.getElementById(pointOfInterest.getAttribute("data-description")).innerHTML;
-
-                if (pointOfInterest.offsetLeft - 50 > 10) {
-                    if (pointOfInterest.offsetLeft - 50 < 1230) {
-                        left = pointOfInterest.offsetLeft - 50;
-                    } else {
-                        left = 1230
-                    }
-                } else {
-                    left = 10;
-                }
-
-                if (pointOfInterest.offsetTop - 110 < 10) {
-                    top = pointOfInterest.offsetTop + 110;
-                } else {
-                    top = pointOfInterest.offsetTop - 110;
-                }
-
-                description.style.left = left.toString() + "px";
-
-                description.style.top = top.toString() + "px";
-
-                document.getElementById("points-of-interest").appendChild(description);
+                showDescription(this);
             });
         }
     }
 
-    hotSpots = document.querySelectorAll("#points-of-interest .point-of-interest.hot");
+    hotSpots = document.querySelectorAll("#points-of-interest .hotspot");
 
     if (hotSpots && hotSpots.length > 0) {
         phase = 0;
@@ -134,11 +156,19 @@ onReady(function() {
             }
 
             for (var i = 0; i < hotSpots.length; i++) {
-                hotSpots[i].style.boxShadow = "0px 0px " + (phase * 15).toString() + "px 0px #000000";
+                hotSpots[i].style.backgroundPosition = "-" + (phase * 360).toString() + "px 0";
             }
 
             phase++;
         }, 750);
+
+        for (var i = 0; i < hotSpots.length; i++) {
+            hotSpots[i].addEventListener("click", function(event) {
+                event.preventDefault();
+
+                showDescription(this);
+            });
+        }
     }
 
     document.addEventListener("click", function(event) {
@@ -162,7 +192,7 @@ onReady(function() {
             }
         }
 
-        if (!closest(event.toElement, ".point-of-interest")) {
+        if (!closest(event.toElement, ".point-of-interest") && !closest(event.toElement, ".hotspot")) {
             description = document.getElementById("current-point-of-interest-description");
 
             if (description) {

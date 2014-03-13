@@ -80,6 +80,15 @@ body {
     z-index: 2;
 }
 
+.hotspot {
+    background-clip: padding-box;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 360px;
+    position: absolute;
+    width: 360px;
+}
+
 .descriptions {
     display: none;
 }

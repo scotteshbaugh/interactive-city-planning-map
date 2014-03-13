@@ -115,7 +115,7 @@ function showDescription(element) {
 }
 
 onReady(function() {
-    var fullscreen, pointsOfInterest, hotSpots, phase;
+    var fullscreen, pointsOfInterest, hotSpots, phase, stageSelectors;
 
     fullscreen = false;
 
@@ -214,4 +214,76 @@ onReady(function() {
             }
         }
     });
+
+    stageSelectors = document.querySelectorAll("#points-of-interest .stage-selector");
+
+    if (stageSelectors && stageSelectors.length > 0) {
+        for (var i = 0; i < stageSelectors.length; i++) {
+            stageSelectors[i].addEventListener("click", function(event) {
+                var parent, stageSelector, stageLeft, stageRight;
+
+                event.preventDefault();
+
+                parent = document.getElementById("points-of-interest");
+
+                stageSelector = this;
+
+                stageLeft = document.getElementById("stage-left");
+
+                if (stageLeft) {
+                    stageLeft.parentNode.removeChild(stageLeft);
+                }
+
+                stageLeft = document.createElement("div");
+
+                stageLeft.setAttribute("id", "stage-left");
+
+                stageLeft.style.width = stageSelector.getAttribute("data-left-width") + "px";
+
+                stageLeft.style.height = parent.offsetHeight.toString() + "px";
+
+                stageLeft.style.top = "0";
+
+                stageLeft.style.left = "0";
+
+                parent.appendChild(stageLeft);
+
+                stageRight = document.getElementById("stage-right");
+
+                if (stageRight) {
+                    stageRight.parentNode.removeChild(stageRight);
+                }
+
+                stageRight = document.createElement("div");
+
+                stageRight.setAttribute("id", "stage-left");
+
+                stageRight.style.width = parent.offsetWidth - parseInt(stageSelector.getAttribute("data-right-start")).toString() + "px";
+
+                stageRight.style.height = parent.offsetHeight.toString() + "px";
+
+                stageRight.style.top = "0";
+
+                stageRight.style.left = stageSelector.getAttribute("data-right-start") + "px";
+
+                parent.appendChild(stageRight);
+
+                stageLeft.addEventListener("click", function(event) {
+                    event.preventDefault();
+
+                    stageLeft.parentNode.removeChild(stageLeft);
+
+                    stageRight.parentNode.removeChild(stageRight);
+                });
+
+                stageRight.addEventListener("click", function(event) {
+                    event.preventDefault();
+
+                    stageLeft.parentNode.removeChild(stageLeft);
+
+                    stageRight.parentNode.removeChild(stageRight);
+                });
+            });
+        }
+    }
 });

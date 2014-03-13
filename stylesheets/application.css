@@ -110,3 +110,19 @@ body {
 .information {
     display: none;
 }
+
+.stage-selector {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    text-align: center;
+    width: 80px;
+}
+
+#stage-left, #stage-right {
+    background: #000000;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 100;
+}

@@ -156,7 +156,11 @@ onReady(function() {
             }
 
             for (var i = 0; i < hotSpots.length; i++) {
-                hotSpots[i].style.backgroundPosition = "-" + (phase * 360).toString() + "px 0";
+                if (hotSpots[i].classList.contains("active")) {
+                    hotSpots[i].style.backgroundPosition = "-" + (phase * 360).toString() + "px -360px";
+                } else {
+                    hotSpots[i].style.backgroundPosition = "-" + (phase * 360).toString() + "px 0";
+                }
             }
 
             phase++;
@@ -172,7 +176,7 @@ onReady(function() {
     }
 
     document.addEventListener("click", function(event) {
-        var pointsOfInterest, description;
+        var pointsOfInterest, hotSpots, description;
 
         pointsOfInterest = document.querySelectorAll("#points-of-interest .point-of-interest");
 
@@ -184,10 +188,20 @@ onReady(function() {
 
                 if (closestPointOfInterest !== pointsOfInterest[i]) {
                     pointsOfInterest[i].classList.remove("active");
+                }
+            }
+        }
 
-                    if (!pointsOfInterest[i].classList.contains("hot")) {
-                        pointsOfInterest[i].style.boxShadow = "";
-                    }
+        hotSpots = document.querySelectorAll("#points-of-interest .hotspot");
+
+        if (hotSpots && hotSpots.length > 0) {
+            for (var i = 0; i < hotSpots.length; i++) {
+                var closestHotspot;
+
+                closestHotspot = closest(event.toElement, ".hotspot");
+
+                if (closestPointOfInterest !== hotSpots[i]) {
+                    hotSpots[i].classList.remove("active");
                 }
             }
         }

@@ -115,7 +115,7 @@ function showDescription(element) {
 }
 
 onReady(function() {
-    var fullscreen, pointsOfInterest, hotSpots, phase, stageSelectors;
+    var fullscreen, pointsOfInterest, hotSpots, phase, phaseSelectors;
 
     fullscreen = false;
 
@@ -157,9 +157,9 @@ onReady(function() {
 
             for (var i = 0; i < hotSpots.length; i++) {
                 if (hotSpots[i].classList.contains("active")) {
-                    hotSpots[i].style.backgroundPosition = "-" + (phase * 360).toString() + "px -360px";
+                    hotSpots[i].style.backgroundPosition = "-" + (phase * 160).toString() + "px -160px";
                 } else {
-                    hotSpots[i].style.backgroundPosition = "-" + (phase * 360).toString() + "px 0";
+                    hotSpots[i].style.backgroundPosition = "-" + (phase * 160).toString() + "px 0";
                 }
             }
 
@@ -215,73 +215,73 @@ onReady(function() {
         }
     });
 
-    stageSelectors = document.querySelectorAll("#points-of-interest .stage-selector");
+    phaseSelectors = document.querySelectorAll("#points-of-interest .phase-selector");
 
-    if (stageSelectors && stageSelectors.length > 0) {
-        for (var i = 0; i < stageSelectors.length; i++) {
-            stageSelectors[i].addEventListener("click", function(event) {
-                var parent, stageSelector, stageLeft, stageRight;
+    if (phaseSelectors && phaseSelectors.length > 0) {
+        for (var i = 0; i < phaseSelectors.length; i++) {
+            phaseSelectors[i].addEventListener("click", function(event) {
+                var parent, phaseSelector, phaseLeft, phaseRight;
 
                 event.preventDefault();
 
                 parent = document.getElementById("points-of-interest");
 
-                stageSelector = this;
+                phaseSelector = this;
 
-                stageLeft = document.getElementById("stage-left");
+                phaseLeft = document.getElementById("phase-left");
 
-                if (stageLeft) {
-                    stageLeft.parentNode.removeChild(stageLeft);
+                if (phaseLeft) {
+                    phaseLeft.parentNode.removeChild(phaseLeft);
                 }
 
-                stageLeft = document.createElement("div");
+                phaseLeft = document.createElement("div");
 
-                stageLeft.setAttribute("id", "stage-left");
+                phaseLeft.setAttribute("id", "phase-left");
 
-                stageLeft.style.width = stageSelector.getAttribute("data-left-width") + "px";
+                phaseLeft.style.width = phaseSelector.getAttribute("data-left-width") + "px";
 
-                stageLeft.style.height = parent.offsetHeight.toString() + "px";
+                phaseLeft.style.height = parent.offsetHeight.toString() + "px";
 
-                stageLeft.style.top = "0";
+                phaseLeft.style.top = "0";
 
-                stageLeft.style.left = "0";
+                phaseLeft.style.left = "0";
 
-                parent.appendChild(stageLeft);
+                parent.appendChild(phaseLeft);
 
-                stageRight = document.getElementById("stage-right");
+                phaseRight = document.getElementById("phase-right");
 
-                if (stageRight) {
-                    stageRight.parentNode.removeChild(stageRight);
+                if (phaseRight) {
+                    phaseRight.parentNode.removeChild(phaseRight);
                 }
 
-                stageRight = document.createElement("div");
+                phaseRight = document.createElement("div");
 
-                stageRight.setAttribute("id", "stage-left");
+                phaseRight.setAttribute("id", "phase-left");
 
-                stageRight.style.width = parent.offsetWidth - parseInt(stageSelector.getAttribute("data-right-start")).toString() + "px";
+                phaseRight.style.width = parent.offsetWidth - parseInt(phaseSelector.getAttribute("data-right-start")).toString() + "px";
 
-                stageRight.style.height = parent.offsetHeight.toString() + "px";
+                phaseRight.style.height = parent.offsetHeight.toString() + "px";
 
-                stageRight.style.top = "0";
+                phaseRight.style.top = "0";
 
-                stageRight.style.left = stageSelector.getAttribute("data-right-start") + "px";
+                phaseRight.style.left = phaseSelector.getAttribute("data-right-start") + "px";
 
-                parent.appendChild(stageRight);
+                parent.appendChild(phaseRight);
 
-                stageLeft.addEventListener("click", function(event) {
+                phaseLeft.addEventListener("click", function(event) {
                     event.preventDefault();
 
-                    stageLeft.parentNode.removeChild(stageLeft);
+                    phaseLeft.parentNode.removeChild(phaseLeft);
 
-                    stageRight.parentNode.removeChild(stageRight);
+                    phaseRight.parentNode.removeChild(phaseRight);
                 });
 
-                stageRight.addEventListener("click", function(event) {
+                phaseRight.addEventListener("click", function(event) {
                     event.preventDefault();
 
-                    stageLeft.parentNode.removeChild(stageLeft);
+                    phaseLeft.parentNode.removeChild(phaseLeft);
 
-                    stageRight.parentNode.removeChild(stageRight);
+                    phaseRight.parentNode.removeChild(phaseRight);
                 });
             });
         }

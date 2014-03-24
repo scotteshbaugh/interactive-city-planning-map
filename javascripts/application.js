@@ -151,7 +151,7 @@ onReady(function() {
         phase = 0;
 
         window.setInterval(function() {
-            if (phase > 3) {
+            if (phase > 2) {
                 phase = 0;
             }
 

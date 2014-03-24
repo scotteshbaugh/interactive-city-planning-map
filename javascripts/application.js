@@ -232,41 +232,41 @@ onReady(function() {
 
                 if (phaseLeft) {
                     phaseLeft.parentNode.removeChild(phaseLeft);
+                } else {
+                    phaseLeft = document.createElement("div");
+
+                    phaseLeft.setAttribute("id", "phase-left");
+
+                    phaseLeft.style.width = phaseSelector.getAttribute("data-left-width") + "px";
+
+                    phaseLeft.style.height = parent.offsetHeight.toString() + "px";
+
+                    phaseLeft.style.top = "0";
+
+                    phaseLeft.style.left = "0";
+
+                    parent.appendChild(phaseLeft);
                 }
-
-                phaseLeft = document.createElement("div");
-
-                phaseLeft.setAttribute("id", "phase-left");
-
-                phaseLeft.style.width = phaseSelector.getAttribute("data-left-width") + "px";
-
-                phaseLeft.style.height = parent.offsetHeight.toString() + "px";
-
-                phaseLeft.style.top = "0";
-
-                phaseLeft.style.left = "0";
-
-                parent.appendChild(phaseLeft);
 
                 phaseRight = document.getElementById("phase-right");
 
                 if (phaseRight) {
                     phaseRight.parentNode.removeChild(phaseRight);
+                } else {
+                    phaseRight = document.createElement("div");
+
+                    phaseRight.setAttribute("id", "phase-right");
+
+                    phaseRight.style.width = parent.offsetWidth - parseInt(phaseSelector.getAttribute("data-right-start")).toString() + "px";
+
+                    phaseRight.style.height = parent.offsetHeight.toString() + "px";
+
+                    phaseRight.style.top = "0";
+
+                    phaseRight.style.left = phaseSelector.getAttribute("data-right-start") + "px";
+
+                    parent.appendChild(phaseRight);
                 }
-
-                phaseRight = document.createElement("div");
-
-                phaseRight.setAttribute("id", "phase-left");
-
-                phaseRight.style.width = parent.offsetWidth - parseInt(phaseSelector.getAttribute("data-right-start")).toString() + "px";
-
-                phaseRight.style.height = parent.offsetHeight.toString() + "px";
-
-                phaseRight.style.top = "0";
-
-                phaseRight.style.left = phaseSelector.getAttribute("data-right-start") + "px";
-
-                parent.appendChild(phaseRight);
 
                 phaseLeft.addEventListener("click", function(event) {
                     event.preventDefault();

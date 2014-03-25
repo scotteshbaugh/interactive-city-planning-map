@@ -220,7 +220,7 @@ onReady(function() {
     if (phaseSelectors && phaseSelectors.length > 0) {
         for (var i = 0; i < phaseSelectors.length; i++) {
             phaseSelectors[i].addEventListener("click", function(event) {
-                var parent, phaseSelector, phaseLeft, phaseRight;
+                var parent, phaseSelector, phaseLeft, phaseRight, description, width, height, left, right, top;
 
                 event.preventDefault();
 
@@ -238,6 +238,68 @@ onReady(function() {
                     phaseLeft.parentNode.removeChild(phaseLeft);
                 } else {
                     phaseSelector.classList.add("active");
+
+                    description = document.getElementById("current-phase-description");
+
+                    if (description) {
+                        description.parentNode.removeChild(description);
+                    }
+
+                    description = document.createElement("div");
+
+                    description.setAttribute("id", "current-phase-description");
+
+                    description.innerHTML = document.getElementById(phaseSelector.getAttribute("data-description")).innerHTML;
+
+                    width = parseInt(phaseSelector.getAttribute("data-description-width"));
+
+                    if (!width) {
+                        width = 800;
+                    } else {
+                        if (width < 300) {
+                            width = 300;
+                        }
+                    }
+
+                    description.style.width = width.toString() + "px";
+
+                    if (phaseSelector.getAttribute("data-description-direction") === "left") {
+                        left = phaseSelector.offsetLeft - width - 30;
+                    } else {
+                        if (phaseSelector.getAttribute("data-description-direction") === "bottom") {
+                            left = phaseSelector.offsetLeft + 30;
+                        } else {
+                            left = phaseSelector.offsetLeft + phaseSelector.offsetWidth + 30;
+                        }
+                    }
+
+                    if (left > parent.offsetWidth - width - 10) {
+                        left = parent.offsetWidth - width - 10;
+                    } else {
+                        if (left < 10) {
+                            left = 10;
+                        }
+                    }
+
+                    height = parseInt(phaseSelector.getAttribute("data-description-height"));
+
+                    if (!height || height < 166) {
+                        height = 166;
+                    }
+
+                    description.style.height = height.toString() + "px";
+
+                    if (phaseSelector.getAttribute("data-description-direction") === "bottom") {
+                        top = phaseSelector.offsetTop + phaseSelector.offsetHeight;
+                    } else {
+                        top = phaseSelector.offsetTop;
+                    }
+
+                    description.style.left = left.toString() + "px";
+
+                    description.style.top = top.toString() + "px";
+
+                    parent.appendChild(description);
 
                     phaseLeft = document.createElement("div");
 
@@ -284,6 +346,12 @@ onReady(function() {
                     for (var j = 0; j < phaseSelectors.length; j++) {
                         phaseSelectors[j].classList.remove("active");
                     }
+
+                    description = document.getElementById("current-phase-description");
+
+                    if (description) {
+                        description.parentNode.removeChild(description);
+                    }
                 });
 
                 phaseRight.addEventListener("click", function(event) {
@@ -295,6 +363,12 @@ onReady(function() {
 
                     for (var j = 0; j < phaseSelectors.length; j++) {
                         phaseSelectors[j].classList.remove("active");
+                    }
+
+                    description = document.getElementById("current-phase-description");
+
+                    if (description) {
+                        description.parentNode.removeChild(description);
                     }
                 });
             });

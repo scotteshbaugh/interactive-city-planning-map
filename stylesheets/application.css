@@ -164,12 +164,22 @@ body {
 }
 
 .phase-selector {
+    background-clip: padding-box;
+    background-color: transparent;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    border: none;
     display: block;
-    height: 30px;
+    height: 130px;
     line-height: 30px;
+    outline: none;
     position: absolute;
     text-align: center;
-    width: 80px;
+    width: 130px;
+}
+
+.phase-selector.active {
+    background-position: -130px 0;
 }
 
 #phase-left, #phase-right {

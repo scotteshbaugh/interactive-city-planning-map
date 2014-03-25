@@ -224,6 +224,10 @@ onReady(function() {
 
                 event.preventDefault();
 
+                for (var j = 0; j < phaseSelectors.length; j++) {
+                    phaseSelectors[j].classList.remove("active");
+                }
+
                 parent = document.getElementById("points-of-interest");
 
                 phaseSelector = this;
@@ -233,6 +237,8 @@ onReady(function() {
                 if (phaseLeft) {
                     phaseLeft.parentNode.removeChild(phaseLeft);
                 } else {
+                    phaseSelector.classList.add("active");
+
                     phaseLeft = document.createElement("div");
 
                     phaseLeft.setAttribute("id", "phase-left");
@@ -274,6 +280,10 @@ onReady(function() {
                     phaseLeft.parentNode.removeChild(phaseLeft);
 
                     phaseRight.parentNode.removeChild(phaseRight);
+
+                    for (var j = 0; j < phaseSelectors.length; j++) {
+                        phaseSelectors[j].classList.remove("active");
+                    }
                 });
 
                 phaseRight.addEventListener("click", function(event) {
@@ -282,6 +292,10 @@ onReady(function() {
                     phaseLeft.parentNode.removeChild(phaseLeft);
 
                     phaseRight.parentNode.removeChild(phaseRight);
+
+                    for (var j = 0; j < phaseSelectors.length; j++) {
+                        phaseSelectors[j].classList.remove("active");
+                    }
                 });
             });
         }

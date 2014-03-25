@@ -75,8 +75,8 @@ function showDescription(element) {
 
     width = parseInt(element.getAttribute("data-description-width"));
 
-    if (!width || width < 200) {
-        width = 200;
+    if (!width || width < 300) {
+        width = 300;
     }
 
     description.style.width = width.toString() + "px";

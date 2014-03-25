@@ -157,9 +157,9 @@ onReady(function() {
 
             for (var i = 0; i < hotSpots.length; i++) {
                 if (hotSpots[i].classList.contains("active")) {
-                    hotSpots[i].style.backgroundPosition = "-" + (phase * 160).toString() + "px -160px";
+                    hotSpots[i].style.backgroundPosition = "-" + (phase * 90).toString() + "px -90px";
                 } else {
-                    hotSpots[i].style.backgroundPosition = "-" + (phase * 160).toString() + "px 0";
+                    hotSpots[i].style.backgroundPosition = "-" + (phase * 90).toString() + "px 0";
                 }
             }
 

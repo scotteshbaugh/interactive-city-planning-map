@@ -32,6 +32,7 @@ p {
 
 h1 {
     color: #4F4F4F;
+    font-size: 60px;
     font-weight: 700;
 }
 
@@ -173,7 +174,15 @@ body {
 
 #phase-left, #phase-right {
     background: #000000;
-    opacity: 0.8;
+    opacity: 0.2;
     position: absolute;
     z-index: 100;
+}
+
+#introduction {
+    height: 400px;
+    left: 3000px;
+    position: absolute;
+    top: 1700px;
+    width: 600px;
 }

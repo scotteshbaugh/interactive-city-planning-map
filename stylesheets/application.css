@@ -95,7 +95,7 @@ body {
     height: 260px;
 }
 
-.point-of-interest.large-active {
+.point-of-interest.large.active {
     background-position: -260px 0;
 }
 

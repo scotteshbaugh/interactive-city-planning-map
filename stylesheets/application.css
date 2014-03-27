@@ -128,9 +128,9 @@ body {
     background-clip: padding-box;
     background-position: 0 0;
     background-repeat: no-repeat;
-    height: 90px;
+    height: 45px;
     position: absolute;
-    width: 90px;
+    width: 45px;
 }
 
 .descriptions {

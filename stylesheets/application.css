@@ -20,9 +20,9 @@
 }
 
 html {
-    height: 2160px;
+    height: 1080px;
     overflow: scroll;
-    width: 3840px;
+    width: 1920px;
 }
 
 p {
@@ -32,7 +32,7 @@ p {
 
 h1 {
     color: #4F4F4F;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -47,18 +47,18 @@ h3 {
 
 body {
     background: url(/images/background.png) center center;
-    height: 2160px;
-    overflow: scroll;
-    width: 3840px;
+    height: 1080px;
+    overflow: hidden;
+    width: 1920px;
 }
 
 #points-of-interest {
-    height: 2160px;
+    height: 1080px;
     left: 0px;
-    overflow: scroll;
+    overflow: hidden;
     position: absolute;
     top: 0px;
-    width: 3840px;
+    width: 1920px;
 }
 
 #points-of-interest img {
@@ -69,51 +69,43 @@ body {
     background-clip: padding-box;
     background-position: 0 0;
     background-repeat: no-repeat;
-    height: 150px;
+    height: 65px;
     position: absolute;
-    width: 130px;
+    width: 65px;
 }
 
 .point-of-interest:hover {
-    background-position: -130px 0;
+    background-position: -65px 0;
 }
 
 .point-of-interest.active {
-    background-position: -130px 0;
-}
-
-.point-of-interest.baseline-two {
-    height: 170px;
-}
-
-.point-of-interest.baseline-three {
-    height: 190px;
+    background-position: -65px 0;
 }
 
 .point-of-interest.large {
-    width: 260px;
-    height: 260px;
+    width: 130px;
+    height: 130px;
 }
 
 .point-of-interest.large.active {
-    background-position: -260px 0;
+    background-position: -130px 0;
 }
 
 .point-of-interest.large:hover {
-    background-position: -260px 0;
+    background-position: -130px 0;
 }
 
 .point-of-interest p {
     font-size: 16px;
     line-height: 20px;
-    margin-top: 130px;
+    margin-top: 65px;
     text-align: center;
 }
 
 .point-of-interest.large p {
     font-size: 16px;
     line-height: 20px;
-    margin-top: 260px;
+    margin-top: 130px;
     text-align: center;
 }
 
@@ -170,16 +162,16 @@ body {
     background-repeat: no-repeat;
     border: none;
     display: block;
-    height: 130px;
+    height: 65px;
     line-height: 30px;
     outline: none;
     position: absolute;
     text-align: center;
-    width: 130px;
+    width: 65px;
 }
 
 .phase-selector.active {
-    background-position: -130px 0;
+    background-position: -65px 0;
 }
 
 #phase-left, #phase-right {
@@ -197,9 +189,9 @@ body {
 }
 
 #introduction {
-    height: 400px;
-    left: 3000px;
+    height: 200px;
+    left: 1400px;
     position: absolute;
-    top: 1700px;
-    width: 600px;
+    top: 800px;
+    width: 400px;
 }

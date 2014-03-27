@@ -10,418 +10,595 @@
     <link href="/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div id="points-of-interest">
-        <button class="phase-selector" style="left: 30px; top: 30px; background-image: url(/images/phase-01.png);" data-phase="phase-1" data-left-width="0" data-right-start="1800" data-description="phase-vision"></button>
-        <button class="phase-selector" style="left: 1900px; top: 30px; background-image: url(/images/phase-02.png);" data-phase="phase-2" data-left-width="1800" data-right-start="2500" data-description="phase-adoption" data-description-width="444"></button>
-        <button class="phase-selector" style="left: 2600px; top: 30px; background-image: url(/images/phase-03.png);" data-phase="phase-3" data-left-width="2500" data-right-start="3400" data-description="phase-implementation" data-description-width="638" data-description-height="200"></button>
-        <button class="phase-selector" style="left: 3500px; top: 30px; background-image: url(/images/phase-04.png);" data-phase="phase-4" data-left-width="3400" data-right-start="3840" data-description="phase-codification" data-description-width="350" data-description-width="350" data-description-direction="bottom"></button>
+            <!--Introduction-->
 
-        <div id="introduction">
+    <div id="introduction">
             <h1>Austin City Planning</h1>
                 <p>As Austin continues to grow rapidly, problems such as traffic, affordability, gentrification, and maintaining the city’s legacy confront the city. City planning is the process by which Austin begins to address these issues. Discover how you can play a role.</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 225px; top: 221px; background-image: url(/images/pre-process_public-all-stakeholders.png);" data-description="pre-1_public-all-stakeholders">
-            <p>Public</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 247px; top: 677px; background-image: url(images/pre-process_creation.png);" data-description="pre-2_creation-1"></div>
-
-        <div class="point-of-interest" style="left: 222px; top: 464px; background-image: url(/images/pre-process_city-council.png);" data-description="pre-3_city-council">
-            <p>City<br>Council</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 81px; top: 866px; background-image: url(/images/pre-process_watershed-protection.png);" data-description="pre-4_watershed-protection">
-            <p>Watershed<br>Protection</p>
-        </div>
-
-        <div class="point-of-interest baseline-three" style="left: 79px; top: 1191px; background-image: url(/images/pre-process_planning-review-department.png);" data-description="pre-5_planning-and-review-department">
-            <p>Planning and<br>Development<br>Review Department</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 52px; top: 1020px; background-image: url(/images/pre-process_transportation-department.png);" data-description="pre-6_transportation-department">
-            <p>Transportation<br>Department</p>
-        </div>
-
-        <div class="point-of-interest large" style="left: 325px; top: 980px; background-image: url(/images/pre-process_pre-committee.png);" data-description="pre-7_pre-committee">
-            <p>Pre-Committee</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 386px; top: 776px; background-image: url(/images/comprehensive-planning_creation.png);" data-description="comprehensive-1_creation-1"></div>
-
-        <div class="point-of-interest large" style="left: 1016px; top: 221px; background-image: url(/images/comprehensive-planning_comprehensive-plan-committee.png);" data-description="comprehensive-2_comprehensive-plan-committee">
-            <p>Comprehensive<br>Plan<br>Committee</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 773px; top: 159px; background-image: url(/images/comprehensive-planning_public-all-stakeholders.png);" data-description="comprehensive-3_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1361px; top: 468px; background-image: url(/images/comprehensive-planning_community-groups.png);" data-description="comprehensive-4_community-groups">
-            <p>Community<br>Groups</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1265px; top: 563px; background-image: url(/images/comprehensive-planning_public-agencies.png);" data-description="comprehensive-5_public-agencies">
-            <p>Public<br>Agencies</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 873px; top: 561px; background-image: url(/images/comprehensive-planning_planning-commission.png);" data-description="comprehensive-6_planning-commission">
-            <p>Planning<br>Commission</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 771px; top: 456px; background-image: url(/images/comprehensive-planning_city-council.png);" data-description="comprehensive-7_city-council">
-            <p>City<br>Council</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 1338px; top: 277px; background-image: url(/images/comprehensive-planning_creation.png);" data-description="comprehensive-8_creation-2"></div>
-
-        <div class="point-of-interest baseline-three" style="left: 1600px; top: 355px; background-image: url(/images/comprehensive-planning_draft-comprehensive-plan.png);" data-description="comprehensive-9_draft-comprehensive-plan">
-            <p>Draft<br>Comprehensive<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 2250px; top: 490px; background-image: url(/images/comprehensive-planning_comprehensive-plan.png);" data-description="comprehensive-10_comprehensive-plan">
-            <p>Comprehensive<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 646px; top: 1034px; background-image: url(/images/master-planning_creation.png);" data-description="master-1_creation-1"></div>
-
-        <div class="point-of-interest baseline-two" style="left: 803px; top: 751px; background-image: url(/images/master-planning_public-agencies.png);" data-description="master-2_public-agencies">
-            <p>Public<br>Agencies</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 723px; top: 873px; background-image: url(/images/master-planning_consulting-group.png);" data-description="master-3_consulting-group">
-            <p>Consulting<br>Group</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 714px; top: 1198px; background-image: url(/images/master-planning_business-owners.png);" data-description="master-4_business-owners">
-            <p>Business<br>Owners</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 799px; top: 1309px; background-image: url(/images/master-planning_community-leaders.png);" data-description="master-5_community-leaders">
-            <p>Community<br>Leaders</p>
-        </div>
-
-        <div class="point-of-interest large" style="left: 1016px; top: 980px; background-image: url(/images/master-planning_master-plan-committee.png);" data-description="master-6_master-plan-committee">
-            <p>Master<br>Plan<br>Committee</p>
-        </div>
-
-        <div class="point-of-interest baseline-three" style="left: 1258px; top: 726px; background-image: url(/images/master-planning_various-city-departments.png);" data-description="master-7_various-city-departments">
-            <p>Various<br>City<br>Departments</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1364px; top: 828px; background-image: url(/images/master-planning_state-regional-agencies.png);" data-description="master-8_state-regional-agencies">
-            <p>State and<br>Regional<br>Agencies</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 1252px; top: 1293px; background-image: url(/images/master-planning_key-stakeholders.png);" data-description="master-9_key-stakeholders">
-            <p>Key<br>Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 1073px; top: 1348px; background-image: url(/images/master-planning_public-all-stakeholders.png);" data-description="master-10_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 1338px; top: 1034px; background-image: url(/images/master-planning_creation.png);" data-description="master-11_creation-2"></div>
-
-        <div class="point-of-interest baseline-three" style="left: 1528px; top: 1029px; background-image: url(/images/master-planning_draft-master-plan.png);" data-description="master-12_draft-master-plan">
-            <p>Draft<br>Master<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1456px; top: 1310px; background-image: url(/images/master-planning_public-all-stakeholders.png);" data-description="master-13_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1598px; top: 1309px; background-image: url(/images/master-planning_media-agencies.png);" data-description="master-14_media-agencies">
-            <p>Media<br>Agencies</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 2259px; top: 1029px; background-image: url(/images/master-planning_master-plan.png);" data-description="master-15_master-plan">
-            <p>Master<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 710px; top: 1645px; background-image: url(/images/neighborhood-planning_home-owners.png);" data-description="neighborhood-1_home-owners">
-            <p>Home<br>Owners</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 676px; top: 1789px; background-image: url(/images/neighborhood-planning_business-owners.png);" data-description="neighborhood-2_business-owners">
-            <p>Business<br>Owners</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 711px; top: 1934px; background-image: url(/images/neighborhood-planning_community-groups.png);" data-description="neighborhood-3_community-groups">
-            <p>Community<br>Groups</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 1008px; top: 1542px; background-image: url(/images/neighborhood-planning_creation.png);" data-description="neighborhood-4_creation-1"></div>
-
-        <div class="point-of-interest baseline-two" style="left: 811px; top: 1496px; background-image: url(/images/neighborhood-planning_austin-neighborhood-planning-staff.png);" data-description="neighborhood-5_austin-neighborhood-planning-staff">
-            <p>Austin Neighborhood<br>Planning Staff</p>
-        </div>
-
-        <div class="point-of-interest large" style="left: 1016px; top: 1740px; background-image: url(/images/neighborhood-planning_neighborhood-plan-committee.png);" data-description="neighborhood-6_neighborhood-plan-committee">
-            <p>Neighborhood<br>Plan<br>Committee</p>
-        </div>
-
-        <div class="point-of-interest" style="left: 1337px; top: 1790px; background-image: url(/images/neighborhood-planning_creation.png);" data-description="neighborhood-7_creation-2"></div>
-
-        <div class="point-of-interest baseline-three" style="left: 1600px; top: 1703px; background-image: url(/images/neighborhood-planning_draft-neighborhood-plan.png);" data-description="neighborhood-8_draft-neighborhood-plan">
-            <p>Draft<br>Neighborhood<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 2250px; top: 1570px; background-image: url(/images/neighborhood-planning_neighborhood-plan.png);" data-description="neighborhood-9_neighborhood-plan">
-            <p>Neighborhood<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1774px; top: 1029px; background-image: url(/images/overall-planning_planning-commission.png);" data-description="overall-1_planning-commission">
-            <p>Planning<br>Commission</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1776px; top: 779px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-2_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1984px; top: 1023px; background-image: url(/images/overall-planning_city-council.png);" data-description="overall-3_city-council">
-            <p>City<br>Council</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 1987px; top: 779px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-4_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest large" style="left: 2515px; top: 980px; background-image: url(/images/overall-planning_regulating-plan-committee.png);" data-description="overall-5_regulating-plan-committee">
-            <p>Regulating<br>Plan<br>Committee</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 2496px; top: 669px; background-image: url(/images/overall-planning_public-agencies.png);" data-description="overall-6_public-agencies">
-            <p>Public<br>Agencies</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 2648px; top: 670px; background-image: url(/images/overall-planning_key-stakeholders.png);" data-description="overall-7_key-stakeholders">
-            <p>Key<br>Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 2495px; top: 1374px; background-image: url(/images/overall-planning_transportation-department.png);" data-description="overall-8_transportation-department">
-            <p>Transportation<br>Department</p>
-        </div>
-
-        <div class="point-of-interest baseline-three" style="left: 2646px; top: 1380px; background-image: url(/images/overall-planning_planning-review-department.png);" data-description="overall-9_planning-and-reviewing-department">
-            <p>Planning and<br>Development<br>Review Department</p>
-        </div>
-
-        <div class="point-of-interest baseline-three" style="left: 2827px; top: 1030px; background-image: url(/images/overall-planning_draft-regulating-plan.png);" data-description="overall-10_draft-regulating-plan">
-            <p>Draft<br>Regulating<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 3050px; top: 1029px; background-image: url(/images/overall-planning_planning-commission.png);" data-description="overall-11_planning-commission">
-            <p>Planning<br>Commission</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 3052px; top: 779px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-12_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 3260px; top: 1023px; background-image: url(/images/overall-planning_city-council.png);" data-description="overall-13_city-council">
-            <p>City<br>Council</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 3263px; top: 779px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-14_public-all-stakeholders">
-            <p>Public and<br>All Stakeholders</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 3476px; top: 1030px; background-image: url(/images/overall-planning_regulating-plan.png);" data-description="overall-15_regulating-plan">
-            <p>Regulating<br>Plan</p>
-        </div>
-
-        <div class="point-of-interest baseline-two" style="left: 3685px; top: 1030px; background-image: url(/images/overall-planning_development-code.png);" data-description="overall-16_development-code">
-            <p>Development<br>Code</p>
-        </div>
-
-        <div class="hotspot" style="left: 70px; top: 325px; background-image: url(/images/pre-process_hotspot-sprite-sheet.png);" data-description="step-1_pre" data-description-height="300"></div>
-        <div class="hotspot" style="left: 976px; top: 871px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-1_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1290px; top: 1195px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-2_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1161px; top: 1445px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-3_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1100px; top: 1445px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-4_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1340px; top: 680px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-5_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1440px; top: 980px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-6_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1464px; top: 1384px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-7_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 1792px; top: 661px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-8_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 2030px; top: 661px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-9_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 2698px; top: 1176px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-10_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 3150px; top: 1176px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-11_master" data-description-height="300"></div>
-        <div class="hotspot" style="left: 3600px; top: 1176px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-12_master" data-description-height="300"></div>
     </div>
+
+    <div id="points-of-interest">
+
+        <!--Phase Icons-->
+
+        <button class="phase-selector" style="left: 30px; top: 30px; background-image: url(/images/phase-01.png);" data-phase="phase-1" data-left-width="0" data-right-start="1800" data-description="phase-vision"></button>
+        <button class="phase-selector" style="left: 936px; top: 30px; background-image: url(/images/phase-02.png);" data-phase="phase-2" data-left-width="1800" data-right-start="2500" data-description="phase-adoption" data-description-width="444"></button>
+        <button class="phase-selector" style="left: 1282px; top: 30px; background-image: url(/images/phase-03.png);" data-phase="phase-3" data-left-width="2500" data-right-start="3400" data-description="phase-implementation" data-description-width="638" data-description-height="200"></button>
+        <button class="phase-selector" style="left: 1686px; top: 30px; background-image: url(/images/phase-04.png);" data-phase="phase-4" data-left-width="3400" data-right-start="3840" data-description="phase-codification" data-description-width="350" data-description-width="350" data-description-direction="bottom"></button>
+
+        <!--Point of Interest Icons-->
+
+        <!--Public-->
+        <div class="point-of-interest" style="left: 106px; top: 104px; background-image: url(/images/pre-process_public-all-stakeholders.png);" data-description="pre-1_public-all-stakeholders"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 113px; top: 329px; background-image: url(images/pre-process_creation.png);" data-description="pre-2_creation-1"></div>
+
+        <!---City Council-->
+        <div class="point-of-interest" style="left: 106px; top: 228px; background-image: url(/images/pre-process_city-council.png);" data-description="pre-3_city-council"></div>
+
+        <!--Watershed Protection-->
+        <div class="point-of-interest" style="left: 32px; top: 425px; background-image: url(/images/pre-process_watershed-protection.png);" data-description="pre-4_watershed-protection"></div>
+
+        <!--Planning and Development Review Department-->
+        <div class="point-of-interest" style="left: 32px; top: 590px; background-image: url(/images/pre-process_planning-review-department.png);" data-description="pre-5_planning-and-review-department"></div>
+
+        <!--Transportation Department-->
+        <div class="point-of-interest" style="left: 18px; top: 507px; background-image: url(/images/pre-process_transportation-department.png);" data-description="pre-6_transportation-department"></div>
+
+        <!--Pre-Committeee-->
+        <div class="point-of-interest large" style="left: 150px; top: 475px; background-image: url(/images/pre-process_pre-committee.png);" data-description="pre-7_pre-committee"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 182px; top: 378px; background-image: url(/images/comprehensive-planning_creation.png);" data-description="comprehensive-1_creation-1"></div>
+
+        <!--Comprehensive Plan Committee-->
+        <div class="point-of-interest large" style="left: 495px; top: 95px; background-image: url(/images/comprehensive-planning_comprehensive-plan-committee.png);" data-description="comprehensive-2_comprehensive-plan-committee"></div>
+
+        <!--Public and All Stakeholders-->
+        <div class="point-of-interest" style="left: 378px; top: 72px; background-image: url(/images/comprehensive-planning_public-all-stakeholders.png);" data-description="comprehensive-3_public-all-stakeholders"></div>
+
+        <!--Community Groups-->
+        <div class="point-of-interest" style="left: 675px; top: 227px; background-image: url(/images/comprehensive-planning_community-groups.png);" data-description="comprehensive-4_community-groups"></div>
+
+        <!--Public Agencies-->
+        <div class="point-of-interest" style="left: 624px; top: 276px; background-image: url(/images/comprehensive-planning_public-agencies.png);" data-description="comprehensive-5_public-agencies"></div>
+
+        <!--Planning Commission-->
+        <div class="point-of-interest" style="left: 431px; top: 273px; background-image: url(/images/comprehensive-planning_planning-commission.png);" data-description="comprehensive-6_planning-commission"></div>
+
+        <!--City Council-->
+        <div class="point-of-interest" style="left: 379px; top: 224px; background-image: url(/images/comprehensive-planning_city-council.png);" data-description="comprehensive-7_city-council"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 658px; top: 129px; background-image: url(/images/comprehensive-planning_creation.png);" data-description="comprehensive-8_creation-2"></div>
+
+        <!--Draft Comprehensive Plan-->
+        <div class="point-of-interest" style="left: 791px; top: 170px; background-image: url(/images/comprehensive-planning_draft-comprehensive-plan.png);" data-description="comprehensive-9_draft-comprehensive-plan"></div>
+
+        <!--Comprehensive Plan-->
+        <div class="point-of-interest" style="left: 1116px; top: 237px; background-image: url(/images/comprehensive-planning_comprehensive-plan.png);" data-description="comprehensive-10_comprehensive-plan"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 312px; top: 507px; background-image: url(/images/master-planning_creation.png);" data-description="master-1_creation-1"></div>
+
+        <!--Public Agencies-->
+        <div class="point-of-interest" style="left: 392px; top: 370px; background-image: url(/images/master-planning_public-agencies.png);" data-description="master-2_public-agencies"></div>
+
+        <!--Consulting Group-->
+        <div class="point-of-interest" style="left: 353px; top: 429px; background-image: url(/images/master-planning_consulting-group.png);" data-description="master-3_consulting-group"></div>
+
+        <!--Business Owners-->
+        <div class="point-of-interest" style="left: 355px; top: 591px; background-image: url(/images/master-planning_business-owners.png);" data-description="master-4_business-owners"></div>
+
+        <!--Community Leaders-->
+        <div class="point-of-interest" style="left: 394px; top: 647px; background-image: url(/images/master-planning_community-leaders.png);" data-description="master-5_community-leaders"></div>
+
+        <!--Master Plan Committee-->
+        <div class="point-of-interest large" style="left: 495px; top: 475px; background-image: url(/images/master-planning_master-plan-committee.png);" data-description="master-6_master-plan-committee"></div>
+
+        <!--Various City Departments-->
+        <div class="point-of-interest" style="left: 623px; top: 359px; background-image: url(/images/master-planning_various-city-departments.png);" data-description="master-7_various-city-departments"></div>
+
+        <!--State and Reigonal Agencies-->
+        <div class="point-of-interest" style="left: 673px; top: 409px; background-image: url(/images/master-planning_state-regional-agencies.png);" data-description="master-8_state-regional-agencies"></div>
+
+        <!--Key Stakeholders-->
+        <div class="point-of-interest" style="left: 618px; top: 641px; background-image: url(/images/master-planning_key-stakeholders.png);" data-description="master-9_key-stakeholders"></div>
+
+        <!--Public and All Stakeholders-->
+        <div class="point-of-interest" style="left: 529px; top: 666px; background-image: url(/images/master-planning_public-all-stakeholders.png);" data-description="master-10_public-all-stakeholders"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 658px; top: 508px; background-image: url(/images/master-planning_creation.png);" data-description="master-11_creation-2"></div>
+
+        <!--Draft Master Plan-->
+        <div class="point-of-interest" style="left: 755px; top: 507px; background-image: url(/images/master-planning_draft-master-plan.png);" data-description="master-12_draft-master-plan"></div>
+
+        <!--Public and All Stakeholders-->
+        <div class="point-of-interest" style="left: 720px; top: 647px; background-image: url(/images/master-planning_public-all-stakeholders.png);" data-description="master-13_public-all-stakeholders"></div>
+
+        <!--Media Agencies-->
+        <div class="point-of-interest" style="left: 790px; top: 647px; background-image: url(/images/master-planning_media-agencies.png);" data-description="master-14_media-agencies"></div>
+
+        <!--Master Plan-->
+        <div class="point-of-interest" style="left: 1121px; top: 507px; background-image: url(/images/master-planning_master-plan.png);" data-description="master-15_master-plan"></div>
+
+        <!--Home Owners-->
+        <div class="point-of-interest" style="left: 350px; top: 815px; background-image: url(/images/neighborhood-planning_home-owners.png);" data-description="neighborhood-1_home-owners"></div>
+
+        <!--Business Owners-->
+        <div class="point-of-interest" style="left: 336px; top: 887px; background-image: url(/images/neighborhood-planning_business-owners.png);" data-description="neighborhood-2_business-owners"></div>
+
+        <!--Community Groups-->
+        <div class="point-of-interest" style="left: 350px; top: 960px; background-image: url(/images/neighborhood-planning_community-groups.png);" data-description="neighborhood-3_community-groups"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 190px; top: 636px; background-image: url(/images/neighborhood-planning_creation.png);" data-description="neighborhood-4_creation-1"></div>
+
+        <!--Austin Neighborhood Planning Staff-->
+        <div class="point-of-interest" style="left: 399px; top: 742px; background-image: url(/images/neighborhood-planning_austin-neighborhood-planning-staff.png);" data-description="neighborhood-5_austin-neighborhood-planning-staff"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 494px; top: 761px; background-image: url(/images/neighborhood-planning_creation.png);" data-description="neighborhood-6_creation-2"></div>
+
+        <!--Neighborhood Plan Committee-->
+        <div class="point-of-interest large" style="left: 495px; top: 855px; background-image: url(/images/neighborhood-planning_neighborhood-plan-committee.png);" data-description="neighborhood-7_neighborhood-plan-committee"></div>
+
+        <!--Creation-->
+        <div class="point-of-interest" style="left: 658px; top: 885px; background-image: url(/images/neighborhood-planning_creation.png);" data-description="neighborhood-8_creation-3"></div>
+
+        <!--Draft Neighborhood Plan-->
+        <div class="point-of-interest" style="left: 791px; top: 844px; background-image: url(/images/neighborhood-planning_draft-neighborhood-plan.png);" data-description="neighborhood-9_draft-neighborhood-plan"></div>
+
+        <!--Neighborhood Plan-->
+        <div class="point-of-interest" style="left: 1116px; top: 777px; background-image: url(/images/neighborhood-planning_neighborhood-plan.png);" data-description="neighborhood-10_neighborhood-plan"></div>
+
+        <!--Planning Commission-->
+        <div class="point-of-interest" style="left: 880px; top: 507px; background-image: url(/images/overall-planning_planning-commission.png);" data-description="overall-1_planning-commission"></div>
+
+        <!--Public and All Stakeholders-->
+        <div class="point-of-interest" style="left: 880px; top: 382px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-2_public-all-stakeholders"></div>
+
+        <!--City Council-->
+        <div class="point-of-interest" style="left: 986px; top: 507px; background-image: url(/images/overall-planning_city-council.png);" data-description="overall-3_city-council"></div>
+
+        <!--Public and All Stakeholders-->
+        <div class="point-of-interest" style="left: 986px; top: 382px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-4_public-all-stakeholders"></div>
+
+        <!--Regulating Plan Committee-->
+        <div class="point-of-interest large" style="left: 1245px; top: 475px; background-image: url(/images/overall-planning_regulating-plan-committee.png);" data-description="overall-5_regulating-plan-committee"></div>
+
+        <!--Public Agencies-->
+        <div class="point-of-interest" style="left: 1240px; top: 330px; background-image: url(/images/overall-planning_public-agencies.png);" data-description="overall-6_public-agencies"></div>
+
+        <!--Key Stakeholders-->
+        <div class="point-of-interest" style="left: 1316px; top: 330px; background-image: url(/images/overall-planning_key-stakeholders.png);" data-description="overall-7_key-stakeholders"></div>
+
+        <!--Transportation Department-->
+        <div class="point-of-interest" style="left: 1240px; top: 684px; background-image: url(/images/overall-planning_transportation-department.png);" data-description="overall-8_transportation-department"></div>
+
+        <!--Planning and Development Review Department-->
+        <div class="point-of-interest" style="left: 1315px; top: 685px; background-image: url(/images/overall-planning_planning-review-department.png);" data-description="overall-9_planning-and-reviewing-department"></div>
+
+        <!--Draft Regulating Plan-->
+        <div class="point-of-interest" style="left: 1405px; top: 507px; background-image: url(/images/overall-planning_draft-regulating-plan.png);" data-description="overall-10_draft-regulating-plan"></div>
+
+        <!--Planning Commission-->
+        <div class="point-of-interest" style="left: 1518px; top: 507px; background-image: url(/images/overall-planning_planning-commission.png);" data-description="overall-11_planning-commission"></div>
+
+        <!--Pubic and All Stakeholders-->
+        <div class="point-of-interest" style="left: 1519px; top: 382px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-12_public-all-stakeholders"></div>
+
+        <!--City Council-->
+        <div class="point-of-interest" style="left: 1624px; top: 507px; background-image: url(/images/overall-planning_city-council.png);" data-description="overall-13_city-council"></div>
+
+        <!--Public and All Stakeholders-->
+        <div class="point-of-interest" style="left: 1624px; top: 382px; background-image: url(/images/overall-planning_public-all-stakeholders.png);" data-description="overall-14_public-all-stakeholders"></div>
+
+        <!--Regulating Plan-->
+        <div class="point-of-interest" style="left: 1729px; top: 507px; background-image: url(/images/overall-planning_regulating-plan.png);" data-description="overall-15_regulating-plan"></div>
+
+        <!--Development Code-->
+        <div class="point-of-interest" style="left: 1834px; top: 507px; background-image: url(/images/overall-planning_development-code.png);" data-description="overall-16_development-code"></div>
+
+        <!--Hotspots-->
+
+        <!--Step 1 Pre-process-->
+        <!-- <div class="hotspot" style="left: 24px; top: 129px; background-image: url(/images/pre-process_hotspot-sprite-sheet.png);" data-description="step-1_pre" data-description-height="300"></div> -->
+
+        <!--Step 1 Master-->
+        <div class="hotspot" style="left: 976px; top: 871px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-1_master" data-description-height="300"></div>
+
+        <!--Step 2 Master-->
+        <div class="hotspot" style="left: 1290px; top: 195px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-2_master" data-description-height="300"></div>
+
+         <!--Step 3 Master-->
+        <div class="hotspot" style="left: 1161px; top: 445px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-3_master" data-description-height="300"></div>
+
+        <!--Step 4 Master-->
+        <div class="hotspot" style="left: 1100px; top: 445px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-4_master" data-description-height="300"></div>
+
+        <!--Step 5 Master-->
+        <div class="hotspot" style="left: 1340px; top: 680px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-5_master" data-description-height="300"></div>
+
+        <!--Step 6 Master-->
+        <div class="hotspot" style="left: 1440px; top: 980px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-6_master" data-description-height="300"></div>
+
+        <!--Step 7 Master-->
+        <div class="hotspot" style="left: 1464px; top: 384px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-7_master" data-description-height="300"></div>
+
+        <!--Step 8 Master-->
+        <div class="hotspot" style="left: 1792px; top: 661px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-8_master" data-description-height="300"></div>
+
+        <!--Step 9 Master-->
+        <div class="hotspot" style="left: 1030px; top: 661px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-9_master" data-description-height="300"></div>
+
+        <!--Step 10 Master-->
+        <div class="hotspot" style="left: 1698px; top: 176px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-10_master" data-description-height="300"></div>
+
+        <!--Step 11 Master-->
+        <div class="hotspot" style="left: 1150px; top: 176px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-11_master" data-description-height="300"></div>
+
+        <!--Step 12 Master-->
+        <div class="hotspot" style="left: 1600px; top: 176px; background-image: url(/images/master-planning_hotspot-sprite-sheet.png);" data-description="step-12_master" data-description-height="300"></div>
+    </div>
+
+    <!--Point of Interest Descriptions-->
+
     <div class="descriptions">
-        <div class="description" id="pre-1_public-all-stakeholders">
-            <p>Includes all citizens, businesses, organizations.</p>
-        </div>
-        <div class="description" id="pre-2_creation-1">
-            <p>The creation of a committee.</p>
-        </div>
-        <div class="description" id="pre-3_city-council">
-            <p>An elected body of six council members and one mayor who have the authority to pass and amend city laws.</p>
-        </div>
-        <div class="description" id="pre-4_watershed-protection">
-            <p>Protects lives, property and the environment by reducing the impact of flood, erosion and water pollution.</p>
-        </div>
-        <div class="description" id="pre-5_planning-and-review-department">
-            <p>A group of officials who review technical plans of land developments to ensure they follow the development code.</p>
-        </div>
-        <div class="description" id="pre-6_transportation-department">
-            <p>Provides and traffic studies and transportation planning balancing livability and mobility.</p>
-        </div>
-        <div class="description" id="pre-7_pre-committee">
-            <p>A loose organization of the city council and various city departments who have the authority to create committees for city plans.</p>
-        </div>
-        <div class="description" id="comprehensive-1_creation-1">
-            <p>The creation of a committee.</p>
-        </div>
-        <div class="description" id="comprehensive-2_comprehensive-plan-committee">
-            <p>A group of selected city officials and community leaders to lead the plan’s development.</p>
-        </div>
-        <div class="description" id="comprehensive-3_public-all-stakeholders">
-            <p>Includes all citizens, businesses, organizations.</p>
-        </div>
-        <div class="description" id="comprehensive-4_community-groups">
-            <p>A group of people who create or enhance unity within a community.</p>
-        </div>
-        <div class="description" id="comprehensive-5_public-agencies">
-            <p>A group of people with a collective goal to serve the community. Includes school districts,</p>
-        </div>
-        <div class="description" id="comprehensive-6_planning-commission">
-            <p>A group of officials who inspect plans and make reccomendations.</p>
-        </div>
-        <div class="description" id="comprehensive-7_city-council">
-            <p>An elected body of six council members and one mayor who have the authority to pass and amend city laws.</p>
-        </div>
-        <div class="description" id="comprehensive-8_creation-2">
-            <p>The creation of a plan document.</p>
-        </div>
-        <div class="description" id="comprehensive-9_draft-comprehensive-plan">
-            <p>A proposed plan developed by the comprehensive plan committee to be approved by city council.</p>
-        </div>
-        <div class="description" id="comprehensive-10_comprehensive-plan">
-            <p>An official document the city uses to guide planning across the entire city.</p>
-        </div>
-        <div class="description" id="master-1_creation-1">
-            <p>The creation of a committee.</p>
-        </div>
-        <div class="description" id="master-2_public-agencies">
-            <p>A group of people with a collective goal to serve the community. Includes school districts,</p>
-        </div>
-        <div class="description" id="master-3_consulting-group">
-            <p>Professionals who provide expert advice.</p>
-        </div>
-        <div class="description" id="master-4_business-owners">
-            <p>A person or group of people who operate a business.</p>
-        </div>
-        <div class="description" id="master-5_community-leaders">
-            <p>People who demonstrate commitment to their neighborhood and its future. Often they are leaders in community organizations.</p>
-        </div>
-        <div class="description" id="master-6_master-plan-committee">
-            <p>A representative group of city staff, transportation agencies, public agencies, businesses, and residents.</p>
-        </div>
-        <div class="description" id="master-7_various-city-departments">
-            <p>City departments relevant to the plan’s success. Departmnets typically include Transportation, Watershed Protection, and Planning Development and Review.</p>
-        </div>
-        <div class="description" id="master-8_state-regional-agencies">
-            <p>Agencies outside the city of Austin but play a role in the plan’s success. </p>
-        </div>
-        <div class="description" id="master-9_key-stakeholders">
-            <p>A group of stakeholders vital to a plan’s success typically including transportation agencies.</p>
-        </div>
-        <div class="description" id="master-10_public-all-stakeholders">
-            <p>Includes all citizens, businesses, organizations.</p>
-        </div>
-        <div class="description" id="master-11_creation-2">
-            <p>The creation of a plan document.</p>
-        </div>
-        <div class="description" id="master-12_draft-master-plan">
-            <p>A proposed plan developed by the master plan committee to be approved by city council.</p>
-        </div>
-        <div class="description" id="master-13_public-all-stakeholders">
-            <p>Includes all citizens, businesses, organizations.</p>
-        </div>
-        <div class="description" id="master-14_media-agencies">
-            <p>Includes newspapers, television, and internet.</p>
-        </div>
-        <div class="description" id="master-15_master-plan">
-            <p>An official document the city uses to guide planning in a reigon of a city.</p>
-        </div>
-        <div class="description" id="neighborhood-1_home-owners">
-            <p>A person or group of people who own a home or non-commercial property.</p>
-        </div>
-        <div class="description" id="neighborhood-2_business-owners">
-            <p>A person or group of people who operate a business.</p>
-        </div>
-        <div class="description" id="neighborhood-3_community-groups">
-            <p>A group of people who create or enhance unity within a community.</p>
-        </div>
-        <div class="description" id="neighborhood-4_creation-1">
-            <p>Creation of a plan proposal.</p>
-        </div>
-        <div class="description" id="neighborhood-5_austin-neighborhood-planning-staff">
-            <p>sdfsdfsd</p>
-        </div>
-        <div class="description" id="neighborhood-6_neighborhood-plan-committee">
-            <p>dfsdfsdfsdfsdf</p>
-        </div>
-        <div class="description" id="neighborhood-7_creation-2">
-            <p>sdfsdfsdfsdfsdfsd</p>
-        </div>
-        <div class="description" id="neighborhood-8_draft-neighborhood-plan">
-            <p>A proposed plan developed by the neighborhood plan committee to be approved by city council.</p>
-        </div>
-        <div class="description" id="neighborhood-9_neighborhood-plan">
-            <p>An official document the city uses to guide planning in a neighborhood.</p>
-        </div>
+
+        <!--Pre-Process-->
+
+            <!--Pubic and All Stakeholders-->
+            <div class="description" id="pre-1_public-all-stakeholders">
+                <h3>Public and All Stakeholders</h3>
+                <p>Includes all citizens, businesses, organizations.</p>
+            </div>
+
+            <!--Creation-->
+            <div class="description" id="pre-2_creation-1">
+                <p>The creation of a committee.</p>
+            </div>
+
+            <!--City Council-->
+            <div class="description" id="pre-3_city-council">
+                <h3>City Council</h3>
+                <p>An elected body of six council members and one mayor who have the authority to pass and amend city laws.</p>
+            </div>
+
+            <!--Watershed Protection-->
+            <div class="description" id="pre-4_watershed-protection">
+                <h3>Watershed Protection</h3>
+                <p>Protects lives, property and the environment by reducing the impact of flood, erosion and water pollution.</p>
+            </div>
+
+            <!--Planning and Development Review Department-->
+            <div class="description" id="pre-5_planning-and-review-department">
+                <h3>Planning and Development Review Department</h3>
+                <p>A group of officials who review technical plans of land developments to ensure they follow the development code.</p>
+            </div>
+
+            <!--Transportation Department-->
+            <div class="description" id="pre-6_transportation-department">
+                <h3>Transportation Department</h3>
+                <p>Provides and traffic studies and transportation planning balancing livability and mobility.</p>
+            </div>
+
+            <!--Pre-Committee-->
+            <div class="description" id="pre-7_pre-committee">
+                <h3>Pre-committee</h3>
+                <p>A loose organization of the city council and various city departments who have the authority to create committees for city plans.</p>
+            </div>
+
+        <!--Comprehensive Planning-->
+
+            <!--Creation-->
+            <div class="description" id="comprehensive-1_creation-1">
+                <p>The creation of a committee.</p>
+            </div>
+
+            <!--Comprehensive Plan Committee-->
+            <div class="description" id="comprehensive-2_comprehensive-plan-committee">
+                <h3>Comprehensive Plan Committee</h3>
+                <p>A group of selected city officials and community leaders to lead the plan’s development.</p>
+            </div>
+
+            <!--Public and All Stakeholders-->
+            <div class="description" id="comprehensive-3_public-all-stakeholders">
+                <h3>Public and All Stakeholders</h3>
+                <p>Includes all citizens, businesses, organizations.</p>
+            </div>
+
+            <!--Community Groups-->
+            <div class="description" id="comprehensive-4_community-groups">
+                <h3>Community Groups</h3>
+                <p>A group of people who create or enhance unity within a community.</p>
+            </div>
+
+            <!--Public Agencies-->
+            <div class="description" id="comprehensive-5_public-agencies">
+                <h3>Public Agencies</h3>
+                <p>A group of people with a collective goal to serve the community. Includes school districts,</p>
+            </div>
+
+            <!--Planning Commission-->
+            <div class="description" id="comprehensive-6_planning-commission">
+                <h3>Planning Commission</h3>
+                <p>A group of officials who inspect plans and make reccomendations.</p>
+            </div>
+
+            <!--City Council-->
+            <div class="description" id="comprehensive-7_city-council">
+                <h3>City Council</h3>
+                <p>An elected body of six council members and one mayor who have the authority to pass and amend city laws.</p>
+            </div>
+
+            <!--Creation-->
+            <div class="description" id="comprehensive-8_creation-2">
+                <p>The creation of a plan document.</p>
+            </div>
+
+            <!--Draft Comprehensive Plan-->
+            <div class="description" id="comprehensive-9_draft-comprehensive-plan">
+                <h3>Draft Comprehensive Plan</h3>
+                <p>A proposed plan developed by the comprehensive plan committee to be approved by city council.</p>
+            </div>
+
+            <!--Comprehesive Plan-->
+            <div class="description" id="comprehensive-10_comprehensive-plan">
+                <h3>Comprehensive Plan</h3>
+                <p>An official document the city uses to guide planning across the entire city.</p>
+            </div>
+
+        <!--Master Planning-->
+
+            <!--Creation-->
+            <div class="description" id="master-1_creation-1">
+                <p>The creation of a committee.</p>
+            </div>
+
+            <!--Public Agencies-->
+            <div class="description" id="master-2_public-agencies">
+                <h3>Public Agencies</h3>
+                <p>A group of people with a collective goal to serve the community. Includes school districts,</p>
+            </div>
+
+            <!--Consulting Group-->
+            <div class="description" id="master-3_consulting-group">
+                <h3>Consulting Group</h3>
+                <p>Professionals who provide expert advice.</p>
+            </div>
+
+            <!--Business Owners-->
+            <div class="description" id="master-4_business-owners">
+                <h3>Business Owners</h3>
+                <p>A person or group of people who operate a business.</p>
+            </div>
+
+            <!--Community Leaders-->
+            <div class="description" id="master-5_community-leaders">
+                <h3>Community Leaders</h3>
+                <p>People who demonstrate commitment to their neighborhood and its future. Often they are leaders in community organizations.</p>
+            </div>
+
+            <!--Master Plan Committee-->
+            <div class="description" id="master-6_master-plan-committee">
+                <h3>Master Plan Committee</h3>
+                <p>A representative group of city staff, transportation agencies, public agencies, businesses, and residents.</p>
+            </div>
+
+            <!--Various City Departments-->
+            <div class="description" id="master-7_various-city-departments">
+                <h3>Various City Departments</h3>
+                <p>City departments relevant to the plan’s success. Departmnets typically include Transportation, Watershed Protection, and Planning Development and Review.</p>
+            </div>
+
+            <!--State and Regional Agencies-->
+            <div class="description" id="master-8_state-regional-agencies">
+                <h3>State and Regional Agencies</h3>
+                <p>Agencies outside the city of Austin but play a role in the plan’s success. </p>
+            </div>
+
+            <!--Key Stakeholders-->
+            <div class="description" id="master-9_key-stakeholders">
+                <h3>Key Stakeholders</h3>
+                <p>A group of stakeholders vital to a plan’s success typically including transportation agencies.</p>
+            </div>
+
+            <!--Public and All Stakeholders-->
+            <div class="description" id="master-10_public-all-stakeholders">
+                <h3>Public and All Stakeholders</h3>
+                <p>Includes all citizens, businesses, organizations.</p>
+            </div>
+
+            <!--Creation-->
+            <div class="description" id="master-11_creation-2">
+                <p>The creation of a plan document.</p>
+            </div>
+
+            <!--Draft Master Plan-->
+            <div class="description" id="master-12_draft-master-plan">
+                <h3>Draft Master Plan</h3>
+                <p>A proposed plan developed by the master plan committee to be approved by city council.</p>
+            </div>
+
+            <!--Public and All Stakeholders-->
+            <div class="description" id="master-13_public-all-stakeholders">
+                <h3>Public and All Stakeholders</h3>
+                <p>Includes all citizens, businesses, organizations.</p>
+            </div>
+
+            <!--Media Agencies-->
+            <div class="description" id="master-14_media-agencies">
+                <h3>Media Agencies</h3>
+                <p>Includes newspapers, television, and internet.</p>
+            </div>
+
+            <!--Master Plan-->
+            <div class="description" id="master-15_master-plan">
+                <h3>Master Plan</h3>
+                <p>An official document the city uses to guide planning in a reigon of a city.</p>
+            </div>
+
+        <!--Neighborhood Planning-->
+
+            <!--Home Owners-->
+            <div class="description" id="neighborhood-1_home-owners">
+                <h3>Home Owners</h3>
+                <p>A person or group of people who own a home or non-commercial property.</p>
+            </div>
+
+            <!--Business Owners-->
+            <div class="description" id="neighborhood-2_business-owners">
+                <h3>Business Owners</h3>
+                <p>A person or group of people who operate a business.</p>
+            </div>
+
+            <!--Community Groups-->
+            <div class="description" id="neighborhood-3_community-groups">
+                <h3>Community Groups</h3>
+                <p>A group of people who create or enhance unity within a community.</p>
+            </div>
+
+            <!--Creation-->
+            <div class="description" id="neighborhood-4_creation-1">
+                <p>Creation of a committee.</p>
+            </div>
+
+            <!--Austin Neighborhood Planning Staff-->
+            <div class="description" id="neighborhood-5_austin-neighborhood-planning-staff">
+                <h3>Austin Neighborhood Planning Staff</h3>
+                <p>sdfsdfsd</p>
+            </div>
+
+            <!--Creation-->
+            <div class="description" id="neighborhood-6_creation-2">
+                <p>Creation of a committee.</p>
+            </div>
+
+            <!--Neighborhood Plan Committee-->
+            <div class="description" id="neighborhood-7_neighborhood-plan-committee">
+                <h3>Neighborhood Plan Committee</h3>
+                <p>dfsdfsdfsdfsdf</p>
+            </div>
+
+            <!--Creation-->
+            <div class="description" id="neighborhood-8_creation-3">
+                <p>The creation of a plan document.</p>
+            </div>
+
+            <!--Draft Neighborhood Plan-->
+            <div class="description" id="neighborhood-9_draft-neighborhood-plan">
+                <h3>Draft Neighborhood Plan</h3>
+                <p>A proposed plan developed by the neighborhood plan committee to be approved by city council.</p>
+            </div>
+
+            <!--Neighborhood Plan-->
+            <div class="description" id="neighborhood-10_neighborhood-plan">
+                <h3>Neighborhood Plan</h3>
+                <p>An official document the city uses to guide planning in a neighborhood.</p>
+            </div>
+
+        <!--Planning Commission-->
         <div class="description" id="overall-1_planning-commission">
+            <h3>Planning Commission</h3>
             <p>A group of officials who inspect plans and make reccomendations.</p>
         </div>
+
+        <!--Public and All Stakeholders-->
         <div class="description" id="overall-2_public-all-stakeholders">
+            <h3>Public and All Stakeholders</h3>
             <p>Includes all citizens, businesses, organizations.</p>
         </div>
+
+        <!--City Council-->
         <div class="description" id="overall-3_city-council">
+            <h3>City Council</h3>
             <p>An elected body of six council members and one mayor who have the authority to pass and amend city laws.</p>
         </div>
+
+        <!--Public and All Stakeholders-->
         <div class="description" id="overall-4_public-all-stakeholders">
+            <h3>Public and All Stakeholders</h3>
             <p>Includes all citizens, businesses, organizations.</p>
         </div>
+
+        <!--Regulating Plan Committee-->
         <div class="description" id="overall-5_regulating-plan-committee">
+            <h3>Regulating Plan Committee</h3>
             <p>A really good definition.</p>
         </div>
+
+        <!--Public Agencies-->
         <div class="description" id="overall-6_public-agencies">
+            <h3>Public Agencies</h3>
             <p>A group of people with a collective goal to serve the community. Includes school districts,</p>
         </div>
+
+        <!--Key Stakeholders-->
         <div class="description" id="overall-7_key-stakeholders">
+            <h3>Key Stakeholders</h3>
             <p>A group of stakeholders vital to a plan’s success typically including transportation agencies.</p>
         </div>
+
+        <!--Transportation Department-->
         <div class="description" id="overall-8_transportation-department">
+            <h3>Transportation Department</h3>
             <p>Provides and traffic studies and transportation planning balancing livability and mobility.</p>
         </div>
+
+        <!--Planning and Development Review Department-->
         <div class="description" id="overall-9_planning-and-reviewing-department">
+            <h3>Planning and Development Review Department</h3>
             <p>A group of officials who review technical plans of land developments to ensure they follow the development code.</p>
         </div>
+
+        <!--Draft Regulating Plan-->
         <div class="description" id="overall-10_draft-regulating-plan">
+            <h3>Draft Regulating Plan</h3>
             <p>A asdfsdfsadfsdaf</p>
         </div>
+
+        <!--Planning Commission-->
         <div class="description" id="overall-11_planning-commission">
+            <h3>Planning Commission</h3>
             <p>A group of officials who inspect plans and make reccomendations.</p>
         </div>
+
+        <!--Public and All Stakeholders-->
         <div class="description" id="overall-12_public-all-stakeholders">
+            <h3>Public and All Stakeholders</h3>
             <p>Includes all citizens, businesses, organizations.</p>
         </div>
+
+        <!--City Council-->
         <div class="description" id="overall-13_city-council">
+            <h3>City Council</h3>
             <p>An elected body of six council members and one mayor who have the authority to pass and amend city laws.</p>
         </div>
+
+        <!--Public and All Stakeholders-->
         <div class="description" id="overall-14_public-all-stakeholders">
+            <h3>Public and All Stakeholders</h3>
             <p>Includes all citizens, businesses, organizations.</p>
         </div>
+
+        <!--Regulating Plan-->
         <div class="description" id="overall-15_regulating-plan">
+            <h3>Regulating Plan</h3>
             <p>A really good definition.</p>
         </div>
+
+        <!--Development Code-->
         <div class="description" id="overall-16_development-code">
+            <h3>Development Code</h3>
             <p>A really good definition.</p>
         </div>
     </div>
+
+    <!--Hotspot Descriptions-->
+
     <div class="pre-process">
         <div class="pre-process_detail" id="step-1_pre">
             <h3>Public Meets with City Council</h3>

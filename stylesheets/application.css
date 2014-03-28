@@ -112,9 +112,11 @@ body {
 #current-point-of-interest-description {
     background: #ffffff;
     background-clip: padding-box;
-    border: 4px solid #4f4f4f;
+    border: 2px solid #4f4f4f;
+    border-radius: 3px;
     font-size: 16px;
     line-height: 20px;
+    opacity:  .92;
     padding: 30px 30px 30px 30px;
     position: absolute;
     z-index: 2;
@@ -178,17 +180,23 @@ body {
     background: #000000;
     opacity: 0.2;
     position: absolute;
-    z-index: 100;
-}
-
-#current-phase-description {
-    font-size: 18px;
-    line-height: 24px;
-    position: absolute;
     z-index: 2;
 }
 
+#current-phase-description {
+    background: #FFFFFF;
+    border: 2px solid #4f4f4f;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 20px;
+    opacity:  .92;
+    padding: 30px 30px 30px 30px;
+    position: absolute;
+    z-index: 3;
+}
+
 #introduction {
+    background: #FFFFFF;
     height: 200px;
     left: 1400px;
     position: absolute;

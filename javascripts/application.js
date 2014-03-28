@@ -93,8 +93,8 @@ function showDescription(element) {
 
     height = parseInt(element.getAttribute("data-description-height"));
 
-    if (!height || height < 100) {
-        height = 100;
+    if (!height || height < 20) {
+        height = 20;
     }
 
     description.style.height = height.toString() + "px";
@@ -254,7 +254,7 @@ onReady(function() {
                     width = parseInt(phaseSelector.getAttribute("data-description-width"));
 
                     if (!width) {
-                        width = 800;
+                        width = 400;
                     } else {
                         if (width < 300) {
                             width = 300;
@@ -283,8 +283,8 @@ onReady(function() {
 
                     height = parseInt(phaseSelector.getAttribute("data-description-height"));
 
-                    if (!height || height < 166) {
-                        height = 166;
+                    if (!height || height < 100) {
+                        height = 100;
                     }
 
                     description.style.height = height.toString() + "px";

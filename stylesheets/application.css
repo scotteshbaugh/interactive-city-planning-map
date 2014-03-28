@@ -46,7 +46,7 @@ h3 {
 }
 
 body {
-    background: url(/images/background.png) center center;
+    background: url(/images/background.png) center center no-repeat;
     height: 1080px;
     overflow: hidden;
     width: 1920px;

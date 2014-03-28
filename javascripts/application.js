@@ -236,6 +236,12 @@ onReady(function() {
 
                 if (phaseLeft) {
                     phaseLeft.parentNode.removeChild(phaseLeft);
+
+                    description = document.getElementById("current-phase-description");
+
+                    if (description) {
+                        description.parentNode.removeChild(description);
+                    }
                 } else {
                     phaseSelector.classList.add("active");
 

@@ -76,6 +76,7 @@ body {
 
 .point-of-interest:hover {
     background-position: -65px 0;
+    cursor: pointer;
 }
 
 .point-of-interest.active {
@@ -135,24 +136,34 @@ body {
     width: 45px;
 }
 
+.hotspot:hover {
+    cursor: pointer;
+}
+
 .descriptions {
     display: none;
 }
+
 .pre-process {
     display: none;
 }
+
 .master-planning-process{
     display: none;
 }
+
 .comprehensive-planning-process {
     display: none;
 }
+
 .neighborhood-planning-process {
     display: none;
 }
+
 .overall-planning-process {
     display: none;
 }
+
 .information {
     display: none;
 }

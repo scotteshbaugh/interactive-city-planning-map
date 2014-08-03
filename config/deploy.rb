@@ -2,7 +2,7 @@
 lock '3.2.1'
 
 set :application, 'austin-city-planning-map'
-set :repo_url, 'git@github.com:scotteshbaugh/portfolio.git'
+set :repo_url, 'git@github.com:scotteshbaugh/interactive-city-planning-map.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call

@@ -42,4 +42,4 @@ forward_agent: true,
 set :deploy_to, '/home/scottesh/austin-city-planning-map'
 set :tmp_dir, '/home/scottesh/tmp'
 
-set :branch, 'master'
+set :branch, 'hd-1920x1080'
